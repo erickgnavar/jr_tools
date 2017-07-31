@@ -22,7 +22,7 @@ A collection of tools to handle Jasper Reports with python
 
 
 * Free software: MIT license
-* Documentation: https://jr-tools.readthedocs.io.
+* Documentation: http://jasperreports-tools.readthedocs.io.
 
 
 Features
