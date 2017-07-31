@@ -7,11 +7,10 @@
 import unittest
 from click.testing import CliRunner
 
-from jr_tools import jr_tools
 from jr_tools import cli
 
 
-class TestJr_tools(unittest.TestCase):
+class JasperReportsToolsTestCase(unittest.TestCase):
     """Tests for `jr_tools` package."""
 
     def setUp(self):
