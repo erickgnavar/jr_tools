@@ -27,7 +27,7 @@ setup(
     long_description=readme + '\n\n' + history,
     author="Erick Navarro",
     author_email='erick@navarro.io',
-    url='https://github.com/erickgnavar/jr_tools',
+    url='https://github.com/erickgnavar/jasper-reports-tools',
     packages=find_packages(include=['jr_tools']),
     entry_points={
         'console_scripts': [
