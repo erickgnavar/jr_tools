@@ -13,16 +13,12 @@ with open('HISTORY.rst') as history_file:
 
 requirements = [
     'Click>=6.0',
-    # TODO: put package requirements here
+    'requests>=2.18',
 ]
 
-setup_requirements = [
-    # TODO(erickgnavar): put setup requirements (distutils extensions, etc.) here
-]
+setup_requirements = []
 
-test_requirements = [
-    # TODO: put package test requirements here
-]
+test_requirements = []
 
 setup(
     name='jr_tools',

@@ -24,11 +24,21 @@ A collection of tools to handle Jasper Reports with python
 * Free software: MIT license
 * Documentation: http://jasperreports-tools.readthedocs.io.
 
+Tested with JasperServer CE 6.4
+
 
 Features
 --------
 
-* TODO
+* Client to get reports in API available formats(PDF, xls, etc)
+
+
+TODO
+----
+
+* A yaml based configuration file to manage reports, data sources, params, etc.
+* Django helper to consume reports and converto to Django responses
+
 
 Credits
 ---------
