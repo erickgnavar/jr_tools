@@ -31,6 +31,7 @@ Features
 --------
 
 * Client to get reports in API available formats(PDF, xls, etc)
+* CLI: run `jr_tools --help` to get the list of available commands
 
 
 TODO

@@ -4,14 +4,47 @@
 
 import click
 
-
-@click.command()
-def main(args=None):
-    """Console script for jr_tools."""
-    click.echo("Replace this message by putting your code into "
-               "jr_tools.cli.main")
-    click.echo("See click documentation at http://click.pocoo.org/")
+from jr_tools.client import Client, ALLOWED_REPORT_FORMATS
 
 
-if __name__ == "__main__":
-    main()
+@click.group()
+def main():
+    """
+    Console scripts to interact with Jasper Server
+    """
+
+
+@click.argument('output', type=click.Path())
+@click.argument('report_path', type=click.STRING)
+@click.option('--format', default='pdf', help='Report format {}'.format(', '.join(ALLOWED_REPORT_FORMATS)))
+@click.option('--params-quantity', type=click.INT, default=0)
+@main.command()
+def run_report(report_path, output, params_quantity, format):
+    """
+    Run report in Jasper Server and save the result to file
+
+    The credenciales will be read from environment variables:
+
+    For example:
+
+    JASPER_URL: http://localhost:8080/jasperserver
+
+    JASPER_USERNAME: jasperadmin
+
+    JASPER_PASSWORD: secret
+    """
+    params = {}
+    if params_quantity:
+        for _ in range(params_quantity):
+            name = input('Parameter name: ')
+            value = input('Parameter value: ')
+            params[name] = value
+
+    client = Client()
+    result = client.run_report(report_path, params, format)
+    if result is not None:
+        with open(output, 'wb') as f:
+            f.write(result)
+        click.echo('Report was saved: {}'.format(output))
+    else:
+        click.echo('Report not found')
