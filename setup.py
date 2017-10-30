@@ -14,6 +14,7 @@ with open('HISTORY.rst') as history_file:
 requirements = [
     'Click>=6.0',
     'requests>=2.18',
+    'PyYAML>=3.12',
 ]
 
 setup_requirements = []

@@ -35,3 +35,28 @@ To get more info about the optional arguments run:
 .. code-block:: console
 
     $ jr_tools run_report --help
+
+Load resources from yaml file
+
+.. code-block:: console
+
+    $ jr_tools load resources.yml
+
+Resources sample yml file
+
+.. code-block:: yml
+
+    files:
+    - uri: /Files/report.jrxml
+      path: /path/to/jrxml/file/on/disk
+      type: jrxml
+
+    reports:
+    - uri: /Reports/report
+      params:
+        - label: param_id
+          type: text
+      jrxml_uri: /Files/report.jrxml
+      data_source_uri: /DataSources/demo
+
+The datasource must be configured previously

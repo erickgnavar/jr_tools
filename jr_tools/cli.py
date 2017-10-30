@@ -4,8 +4,9 @@
 from __future__ import absolute_import
 
 import click
+import yaml
 
-from jr_tools.client import Client, ALLOWED_REPORT_FORMATS
+from jr_tools.client import ALLOWED_REPORT_FORMATS, Client
 
 
 @click.group()
@@ -49,3 +50,23 @@ def run_report(report_path, output, params_quantity, format):
         click.echo('Report was saved: {}'.format(output))
     else:
         click.echo('Report not found')
+
+
+@click.argument('config', type=click.Path())
+@main.command(help='Load resources to jasper server')
+def load(config):
+    with open(config) as f:
+        data = yaml.load(f.read())
+        client = Client()
+
+        click.echo('Deleting previous reports...')
+        for value in data.get('reports', []):
+            client.delete_report(value['uri'])
+
+        click.echo('Uploading files...')
+        for value in data.get('files', []):
+            client.upload_file(value)
+
+        click.echo('Uploading reports...')
+        for value in data.get('reports', []):
+            client.upload_report(value)

@@ -31,13 +31,12 @@ Features
 --------
 
 * Client to get reports in API available formats(PDF, xls, etc)
-* CLI: run `jr_tools --help` to get the list of available commands
+* CLI: run ``jr_tools --help`` to get the list of available commands
+* CLI: load resources from yaml file ``jr_tools load path_to_yaml_file``
 
 
 TODO
 ----
-
-* A yaml based configuration file to manage reports, data sources, params, etc.
 * Django helper to consume reports and converto to Django responses
 
 
