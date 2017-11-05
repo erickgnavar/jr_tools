@@ -195,6 +195,8 @@ class Client(object):
         res = self._post(input_control_url, json={
             'type': 2,  # single value
             'label': data['label'],
+            'mandatory': data.get('mandatory', False),
+            'visible': data.get('visible', True),
             'dataType': {
                 'dataTypeReference': {
                     'uri': data_type_uri

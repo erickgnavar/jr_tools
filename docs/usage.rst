@@ -56,6 +56,7 @@ Resources sample yml file
       params:
         - label: param_id
           type: text
+          mandatory: true
       jrxml_uri: /Files/report.jrxml
       data_source_uri: /DataSources/demo
 

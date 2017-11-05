@@ -2,6 +2,11 @@
 History
 =======
 
+0.3.0 (2017-11-06)
+------------------
+
+* Add option to choose if a parameters must be mandatory
+
 0.2.0 (2017-10-31)
 ------------------
 

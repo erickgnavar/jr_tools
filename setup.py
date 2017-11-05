@@ -23,7 +23,7 @@ test_requirements = []
 
 setup(
     name='jr_tools',
-    version='0.2.0',
+    version='0.3.0',
     description="A collection of tools to handle Jasper Reports with python",
     long_description=readme + '\n\n' + history,
     author="Erick Navarro",
