@@ -34,6 +34,33 @@ Features
 * CLI: run ``jr_tools --help`` to get the list of available commands
 * CLI: load resources from yaml file ``jr_tools load path_to_yaml_file``
 
+Development
+-----------
+
+For development there is a docker-compose based configuration to start jasper server and mysql.
+
+Use the below commands to handle the docker setup:
+
+* ``make docker_up``: this will launch docker-compose services, it's going to take a few minutes to download the required images and setup everything.
+* ``make docker_down``: this will shutdown the launched containers.
+* ``make mysql_shell``: this will launch a mysql console to interact with the database, by default it connects to ``demo`` database.
+* ``make mysql_shell_root``: the same as above but use the ``root`` user.
+
+Credentials:
+
+Jasper Server:
+
+* username: ``jasperadmin``
+* password: ``jasperadmin``
+
+MySQL:
+
+* username: ``demo``
+* password: ``demo``
+* root password: ``root``
+* default database: ``demo``
+
+After the setup is complete you can enter to http://localhost:8080 and login using the credentials from above.
 
 TODO
 ----

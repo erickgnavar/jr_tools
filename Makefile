@@ -84,3 +84,15 @@ dist: clean ## builds source and wheel package
 
 install: clean ## install the package to the active Python's site-packages
 	python setup.py install
+
+docker_up:
+	docker-compose -f docker/docker-compose.yml --project-name jasperserver up -d
+
+docker_down:
+	docker-compose -f docker/docker-compose.yml --project-name jasperserver down
+
+mysql_shell:
+	docker run -it --rm --network jasperserver_default --link jasperserver_db_1:db mysql:8.0 mysql -h db -u demo -p
+
+mysql_shell_root:
+	docker run -it --rm --network jasperserver_default --link jasperserver_db_1:db mysql:8.0 mysql -h db -u root -p
