@@ -12,7 +12,7 @@ with open('HISTORY.rst') as history_file:
     history = history_file.read()
 
 requirements = [
-    'Click>=6.0',
+    'Click>=6.0,<7.0',
     'requests>=2.18',
     'PyYAML>=3.12',
 ]
@@ -23,7 +23,7 @@ test_requirements = []
 
 setup(
     name='jr_tools',
-    version='0.3.0',
+    version='0.3.1',
     description="A collection of tools to handle Jasper Reports with python",
     long_description=readme + '\n\n' + history,
     author="Erick Navarro",

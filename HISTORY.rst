@@ -2,6 +2,11 @@
 History
 =======
 
+0.3.1 (2018-10-24)
+------------------
+
+* Pin Click version to 6.X to use underscore command names
+
 0.3.0 (2017-11-06)
 ------------------
 
