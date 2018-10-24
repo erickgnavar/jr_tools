@@ -6,11 +6,11 @@ JasperReports Tools
 .. image:: https://img.shields.io/pypi/v/jr_tools.svg
         :target: https://pypi.python.org/pypi/jr_tools
 
-.. image:: https://img.shields.io/travis/erickgnavar/jasper-reports-tools.svg
-        :target: https://travis-ci.org/erickgnavar/jasper-reports-tools
+.. image:: https://img.shields.io/travis/erickgnavar/jr_tools.svg
+        :target: https://travis-ci.org/erickgnavar/jr_tools
 
-.. image:: https://readthedocs.org/projects/jasperreports-tools/badge/?version=latest
-        :target: https://jasperreports-tools.readthedocs.io/en/latest/?badge=latest
+.. image:: https://readthedocs.org/projects/jr-tools/badge/?version=latest
+        :target: https://jr-tools.readthedocs.io/en/latest/?badge=latest
         :alt: Documentation Status
 
 .. image:: https://pyup.io/repos/github/erickgnavar/jr_tools/shield.svg
@@ -22,7 +22,7 @@ A collection of tools to handle Jasper Reports with python
 
 
 * Free software: MIT license
-* Documentation: http://jasperreports-tools.readthedocs.io.
+* Documentation: http://jr-tools.readthedocs.io.
 
 Tested with JasperServer CE 6.4
 
